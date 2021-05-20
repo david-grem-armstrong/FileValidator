@@ -1,0 +1,195 @@
+{
+	"search_all_sub_folders" : true,
+	"validation_configs" : [
+		{
+			"name": "image_config_characters",
+			"filter_rules": [
+				{
+					"rule_type": "FileExtentsionMatchValidatorRule",
+					"name" : "image_extension",
+					"possible_matches" : [
+						".png",
+						".jpg"
+					]
+				},
+				{
+					"rule_type": "FileNameMatchValidatorRule",
+					"name" : "image_character",
+					"string_operator" : "STARTS_WITH",
+					"possible_matches" : [
+						"character",
+						"chracter"
+					]
+				}
+			],
+			"validation_rule" : {
+				"rule_type": "AndValidatorRule",
+				"name" : "image_validation_rule",
+				"rules" : [
+					{
+						"rule_type": "FileExtentsionMatchValidatorRule",
+						"name" : "image_extension_validation",
+						"possible_matches" : [
+							".png",
+							".jpg"
+						]
+					},
+					{
+						"rule_type": "FileNameMatchValidatorRule",
+						"name" : "image_character",
+						"string_operator" : "STARTS_WITH",
+						"possible_matches" : [
+							"character_",
+						]
+					}
+				]
+			},
+			"name_seperator" : "-",
+			"output_path" : "./Art/Characters/{part1}/",
+			"output_filename" : "character_{part1}_{width}x{height}_{file_count}.{current_extension}",
+			"auto_convert": true
+		},
+		{
+			"name": "image_config_objects",
+			"filter_rules": [
+				{
+					"rule_type": "FileExtentsionMatchValidatorRule",
+					"name" : "image_extension",
+					"possible_matches" : [
+						".png",
+						".jpg"
+					]
+				},
+				{
+					"rule_type": "FileNameMatchValidatorRule",
+					"name" : "image_object",
+					"string_operator" : "STARTS_WITH",
+					"possible_matches" : [
+						"object",
+						"obj"
+					]
+				}
+			],
+			"validation_rule" : {
+				"rule_type": "AndValidatorRule",
+				"name" : "image_validation_rule",
+				"rules" : [
+					{
+						"rule_type": "FileExtentsionMatchValidatorRule",
+						"name" : "image_extension_validation",
+						"possible_matches" : [
+							".png",
+							".jpg"
+						]
+					},
+					{
+						"rule_type": "FileNameMatchValidatorRule",
+						"name" : "image_object_validation",
+						"string_operator" : "STARTS_WITH",
+						"possible_matches" : [
+							"object_",
+						]
+					}
+				]
+			},
+			"name_seperator" : "-",
+			"output_path" : "./Objects/",
+			"output_filename" : "object_{part1}_{width}x{height}_{file_count}.{current_extension}",
+			"auto_convert": true
+		},
+		{
+			"name": "image_config_environments_1",
+			"filter_rules": [
+				{
+					"rule_type": "FileExtentsionMatchValidatorRule",
+					"name" : "image_extension",
+					"possible_matches" : [
+						".png",
+						".jpg"
+					]
+				},
+				{
+					"rule_type": "FileNameMatchValidatorRule",
+					"name" : "image_environment_filter",
+					"string_operator" : "STARTS_WITH",
+					"possible_matches" : [
+						"environment",
+					]
+				}
+			],
+			"validation_rule" : {
+				"rule_type": "AndValidatorRule",
+				"name" : "image_validation_rule",
+				"rules" : [
+					{
+						"rule_type": "FileExtentsionMatchValidatorRule",
+						"name" : "image_extension_validation",
+						"possible_matches" : [
+							".png",
+							".jpg"
+						]
+					},
+					{
+						"rule_type": "FileNameMatchValidatorRule",
+						"name" : "image_environment_validation",
+						"string_operator" : "STARTS_WITH",
+						"possible_matches" : [
+							"environment_",
+						]
+					}
+				]
+			},
+			"name_seperator" : "-",
+			"output_path" : "./Environments/",
+			"output_filename" : "environment_{part1}_{width}x{height}_{file_count}.{current_extension}",
+			"auto_convert": true
+		},
+		{
+			"name": "image_config_environments_2",
+			"filter_rules": [
+				{
+					"rule_type": "FileExtentsionMatchValidatorRule",
+					"name" : "image_extension",
+					"possible_matches" : [
+						".png",
+						".jpg"
+					]
+				},
+				{
+					"rule_type": "FileNameMatchValidatorRule",
+					"name" : "image_env_filter",
+					"string_operator" : "STARTS_WITH",
+					"possible_matches" : [
+						"env",
+					]
+				}
+			],
+			"validation_rule" : {
+				"rule_type": "AndValidatorRule",
+				"name" : "image_validation_rule",
+				"rules" : [
+					{
+						"rule_type": "FileExtentsionMatchValidatorRule",
+						"name" : "image_extension_validation",
+						"possible_matches" : [
+							".png",
+							".jpg"
+						]
+					},
+					{
+						"rule_type": "FileNameMatchValidatorRule",
+						"name" : "image_environment_validation",
+						"string_operator" : "STARTS_WITH",
+						"possible_matches" : [
+							"environment_",
+						]
+					}
+				]
+			},
+			"name_seperator" : "_",
+			"output_path" : "./Environments/",
+			"output_filename" : "environment_{part1}_{part2}_{width}x{height}_{file_count}.{current_extension}",
+			"auto_convert": true
+		}
+	]
+}

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "FileValidator": {
+      "commandName": "Project",
+      "commandLineArgs": "../../../Sample/FileValidatorConfig.json ../../../Sample/TestSearchDir "
+    }
+  }
+}
